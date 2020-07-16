@@ -1,3 +1,4 @@
+impoert os
 import pandas as pd
 
 def optimize_datatypes(df, datetime):
@@ -29,23 +30,23 @@ def optimize_datatypes(df, datetime):
     return df
     
     def read_csv(filepath, date_col=None):
-    '''
-    This function will read csv file.
+        '''
+        This function will read csv file.
 
-    Parameters
-    ----------
-    filepath : str
-        Filepath of csv file
-    date_col : str or list
-        Name or list of datetime column 
-    
+        Parameters
+        ----------
+        filepath : str
+            Filepath of csv file
+        date_col : str or list
+            Name or list of datetime column 
 
-    Returns
-    -------
-    pandas.DataFrame
-        Dataframe of csv file
-    '''
-    assert os.path.exists(filepath), f'{filepath} does not exist.'
-    df = pd.read_csv(filepath)
-    df = optimize_datatypes(df, date_col)
-    return df
+
+        Returns
+        -------
+        pandas.DataFrame
+            Dataframe of csv file
+        '''
+        assert os.path.exists(filepath), f'{filepath} does not exist.'
+        df = pd.read_csv(filepath)
+        df = optimize_datatypes(df, date_col)
+        return df
