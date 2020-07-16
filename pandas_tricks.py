@@ -1,4 +1,4 @@
-impoert os
+import os
 import pandas as pd
 
 def optimize_datatypes(df, datetime):
